@@ -27,7 +27,7 @@ if st.button("Scrape Reviews"):
             flipkart_url = f"https://www.flipkart.com/search?q={search_string}"
 
             # Fetch Flipkart search page
-            logging.info("Fetching Flipkart search page...")
+            logging.info("Fetching Flipkart search page...") 
             uClient = requests.get(flipkart_url)
             uClient.raise_for_status()  # Raise an error for bad status codes
             flipkart_page = uClient.content

@@ -119,7 +119,7 @@ if st.button("Scrape Reviews"):
                         uri = "mongodb+srv://anmolrana909:HCiTrA1djk323sFH@web-0.8kmhb.mongodb.net/?retryWrites=true&w=majority&appName=web-0"
                         try:
                             client = pymongo.MongoClient(uri)
-                            db = client['WebScrapCluster']
+                            db = client['WebScrapCluster'] 
                             coll = db['Project 0']
                             coll.insert_many(reviews)
 

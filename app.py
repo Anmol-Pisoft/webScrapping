@@ -116,12 +116,12 @@ if st.button("Scrape Reviews"):
                         st.success(f"Reviews saved to {filename}")
 
                         # Save reviews to MongoDB
-                        uri = "mongodb+srv://anmolrana909:iaTVvWpQauCIZTja@webscrapcluster.ss56b.mongodb.net/?retryWrites=true&w=majority&appName=WebScrapCluster"
+                        uri = "mongodb+srv://anmolrana909:HCiTrA1djk323sFH@web-0.8kmhb.mongodb.net/?retryWrites=true&w=majority&appName=web-0"
                         try:
                             client = pymongo.MongoClient(uri)
                             db = client['WebScrapCluster']
-                            coll_pw = db['PROJECT 0']
-                            coll_pw.insert_many(reviews)
+                            coll = db['Project 0']
+                            coll.insert_many(reviews)
 
                             # Confirm MongoDB connection
                             client.admin.command('ping')
